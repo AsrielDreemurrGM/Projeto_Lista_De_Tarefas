@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Props } from './index'
 
-export const Card = styled.div<Props>`
+type PropsSemLegendaEContador = Omit<Props, 'legenda' | 'contador'>
+
+export const Card = styled.div<PropsSemLegendaEContador>`
   padding: 8px;
   color: ${(props) => (props.ativo ? '#1E90FF' : '#5e5e5e')};
   background-color: ${(props) => (props.ativo ? '#fff' : '#fcfcfc')};
