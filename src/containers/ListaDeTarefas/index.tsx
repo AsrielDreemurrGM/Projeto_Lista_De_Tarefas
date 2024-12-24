@@ -40,7 +40,7 @@ const ListaDetarefas = () => {
     const complemento =
       termo !== undefined && termo.length > 0 ? ` e "${termo}"` : ''
     if (criterio === 'Todas') {
-      mensagem = `${quantidade} tarefa(s) no Total ${complemento}`
+      mensagem = `${quantidade} tarefa(s) encontrada(s) com "Todas" ${complemento}`
     } else {
       mensagem = `${quantidade} tarefa(s) encontrada(s) com ${`${criterio} ${valor}`}${complemento}`
     }
