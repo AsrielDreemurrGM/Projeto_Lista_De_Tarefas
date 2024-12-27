@@ -34,7 +34,7 @@ export const Titulo = styled.h2`
 
 export const Campo = styled.input`
   border-radius: 8px;
-  border-color: ${variaveis.cinzaMedio};
+  border: 2px solid ${variaveis.cinzaMedio};
   color: ${variaveis.cinzaMedio};
   background-color: ${variaveis.branco};
   padding: 8px;
