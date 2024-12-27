@@ -61,10 +61,25 @@ const tarefasSlice = createSlice({
       } else {
         state.itens.push(action.payload)
       }
+    },
+    alterarStatus: (
+      state,
+      action: PayloadAction<{ id: number; concluido: boolean }>
+    ) => {
+      const indexDaTarefa = state.itens.findIndex(
+        (t) => t.id === action.payload.id
+      )
+
+      if (indexDaTarefa >= 0) {
+        state.itens[indexDaTarefa].status = action.payload.concluido
+          ? enums.Status.CONCLUIDO
+          : enums.Status.PENDENTE
+      }
     }
   }
 })
 
-export const { remover, editar, adicionar } = tarefasSlice.actions
+export const { remover, editar, adicionar, alterarStatus } =
+  tarefasSlice.actions
 
 export default tarefasSlice.reducer
