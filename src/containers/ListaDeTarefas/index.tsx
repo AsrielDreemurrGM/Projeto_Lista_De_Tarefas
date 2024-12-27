@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 import Tarefa from '../../components/Tarefa'
-import { Container, Resultado } from './styles'
+import { MainContainer, Titulo } from '../../styles'
 
 import { RootReducer } from '../../store'
 
@@ -35,7 +35,7 @@ const ListaDetarefas = () => {
     }
   }
 
-  const exibeResultadoFiltragem = (quantidade: number) => {
+  const exibeTituloFiltragem = (quantidade: number) => {
     let mensagem = ''
     const complemento =
       termo !== undefined && termo.length > 0 ? ` e "${termo}"` : ''
@@ -48,11 +48,11 @@ const ListaDetarefas = () => {
   }
 
   const tarefasFiltradas = filtraTarefas()
-  const mensagem = exibeResultadoFiltragem(tarefasFiltradas.length)
+  const mensagem = exibeTituloFiltragem(tarefasFiltradas.length)
 
   return (
-    <Container>
-      <Resultado>{mensagem}</Resultado>
+    <MainContainer>
+      <Titulo as="p">{mensagem}</Titulo>
       <ul>
         {tarefasFiltradas.map((t) => (
           <li key={t.titulo}>
@@ -66,7 +66,7 @@ const ListaDetarefas = () => {
           </li>
         ))}
       </ul>
-    </Container>
+    </MainContainer>
   )
 }
 

@@ -6,6 +6,7 @@ import FiltroCard from '../../components/FiltroCard'
 
 import * as S from './styles'
 import * as enums from '../../utils/enums/TarefaEnums'
+import { Campo } from '../../styles'
 
 const BarraLateral = () => {
   const dispatch = useDispatch()
@@ -13,7 +14,7 @@ const BarraLateral = () => {
   return (
     <S.Aside>
       <div>
-        <S.Buscar
+        <Campo
           type="text"
           placeholder="Pesquisar (Por Título)"
           value={termo}
