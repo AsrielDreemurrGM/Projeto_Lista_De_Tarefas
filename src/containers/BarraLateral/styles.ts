@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #eee;
+  background-color: ${variaveis.offWhite};
   height: 100vh;
 `
 
@@ -15,9 +16,9 @@ export const Filtros = styled.div`
 
 export const Buscar = styled.input`
   border-radius: 8px;
-  border-color: #666666;
-  color: #666666;
-  background-color: #fff;
+  border-color: ${variaveis.cinzaMedio};
+  color: ${variaveis.cinzaMedio};
+  background-color: ${variaveis.branco};
   padding: 8px;
   font-weight: bold;
   width: 100%;

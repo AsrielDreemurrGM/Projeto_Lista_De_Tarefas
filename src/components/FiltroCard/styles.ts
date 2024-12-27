@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 type Props = {
   ativo: boolean
@@ -6,9 +7,12 @@ type Props = {
 
 export const Card = styled.div<Props>`
   padding: 8px;
-  color: ${(props) => (props.ativo ? '#1E90FF' : '#5e5e5e')};
-  background-color: ${(props) => (props.ativo ? '#fff' : '#fcfcfc')};
-  border: 1px solid ${(props) => (props.ativo ? '#1E90FF' : '#a1a1a1')};
+  color: ${(props) =>
+    props.ativo ? variaveis.azul : variaveis.cinzaIntermediario};
+  background-color: ${(props) =>
+    props.ativo ? variaveis.branco : variaveis.offWhite};
+  border: 1px solid
+    ${(props) => (props.ativo ? variaveis.azul : variaveis.cinzaMedio)};
   border-radius: 8px;
   cursor: pointer;
 `

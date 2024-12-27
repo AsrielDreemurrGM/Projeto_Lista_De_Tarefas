@@ -14,18 +14,18 @@ function retornaCorDeFundo(props: TagProps): string {
     if (props.prioridade === enums.Prioridades.URGENTE)
       return variaveis.vermelho
     if (props.prioridade === enums.Prioridades.IMPORTANTE)
-      return variaveis.amareloEscuro
+      return variaveis.laranja
   } else {
     if (props.status === enums.Status.PENDENTE) return variaveis.amarelo
     if (props.status === enums.Status.CONCLUIDO) return variaveis.verde
   }
 
-  return '#ccc'
+  return variaveis.cinzaEscuro
 }
 
 export const Card = styled.div`
   border-radius: 16px;
-  background-color: #fcfcfc;
+  background-color: ${variaveis.offWhite};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   margin-bottom: 32px;
@@ -39,7 +39,7 @@ export const Titulo = styled.h3`
 
 export const Tag = styled.span<TagProps>`
   padding: 4px 8px;
-  color: #fff;
+  color: ${variaveis.branco};
   font-size: 10px;
   font-weight: bold;
   background-color: ${(props) => retornaCorDeFundo(props)};
@@ -52,7 +52,7 @@ export const Descricao = styled.textarea`
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   line-height: 24px;
-  color: #8b8b8b;
+  color: ${variaveis.cinzaMedio};
   display: block;
   width: 100%;
   margin: 16px 0;
@@ -67,13 +67,13 @@ export const BarraDeAcoes = styled.div`
 `
 
 export const Botao = styled.button`
-  color: #fff;
+  color: ${variaveis.branco};
   font-size: 12px;
   font-weight: bold;
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: #2f3640;
+  background-color: ${variaveis.cinzaEscuro};
   border-radius: 8px;
   margin-right: 8px;
 `
