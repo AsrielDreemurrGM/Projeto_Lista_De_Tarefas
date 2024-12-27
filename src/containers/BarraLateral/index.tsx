@@ -15,7 +15,7 @@ const BarraLateral = () => {
       <div>
         <S.Buscar
           type="text"
-          placeholder="Buscar"
+          placeholder="Pesquisar (Por Título)"
           value={termo}
           onChange={(evento) => dispatch(alteraTermo(evento.target.value))}
         />
