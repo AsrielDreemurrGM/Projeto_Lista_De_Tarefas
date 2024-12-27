@@ -21,4 +21,5 @@ export const Contador = styled.span`
 
 export const Label = styled.label`
   font-size: 14px;
+  cursor: pointer;
 `
