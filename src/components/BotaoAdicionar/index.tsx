@@ -1,5 +1,5 @@
 import { Circulo } from './syles'
 
-const BotaoAdicionar = () => <Circulo to="/novo">+</Circulo>
+const BotaoAdicionar = () => <Circulo to="/adicionarTarefa">+</Circulo>
 
 export default BotaoAdicionar
