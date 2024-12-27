@@ -5,20 +5,20 @@ import * as enums from '../../utils/enums/TarefaEnums'
 import { Botao } from '../../styles'
 
 type TagProps = {
-  parametro: 'Status' | 'Prioridade'
-  prioridade?: enums.Prioridades
-  status?: enums.Status
+  $parametro: 'Status' | 'Prioridade'
+  $prioridade?: enums.Prioridades
+  $status?: enums.Status
 }
 
 function retornaCorDeFundo(props: TagProps): string {
-  if (props.parametro === 'Prioridade') {
-    if (props.prioridade === enums.Prioridades.URGENTE)
+  if (props.$parametro === 'Prioridade') {
+    if (props.$prioridade === enums.Prioridades.URGENTE)
       return variaveis.vermelho
-    if (props.prioridade === enums.Prioridades.IMPORTANTE)
+    if (props.$prioridade === enums.Prioridades.IMPORTANTE)
       return variaveis.laranja
   } else {
-    if (props.status === enums.Status.PENDENTE) return variaveis.amarelo
-    if (props.status === enums.Status.CONCLUIDO) return variaveis.verde
+    if (props.$status === enums.Status.PENDENTE) return variaveis.amarelo
+    if (props.$status === enums.Status.CONCLUIDO) return variaveis.verde
   }
 
   return variaveis.cinzaEscuro

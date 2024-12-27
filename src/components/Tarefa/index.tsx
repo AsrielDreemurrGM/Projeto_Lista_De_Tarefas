@@ -55,10 +55,10 @@ const Tarefa = ({
           {titulo}
         </S.Titulo>
       </label>
-      <S.Tag parametro="Prioridade" prioridade={prioridade}>
+      <S.Tag $parametro="Prioridade" $prioridade={prioridade}>
         {prioridade}
       </S.Tag>
-      <S.Tag parametro="Status" status={status}>
+      <S.Tag $parametro="Status" $status={status}>
         {status}
       </S.Tag>
       <S.Descricao
