@@ -44,7 +44,7 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
   }
 
   return (
-    <S.Card ativo={ativo} onClick={filtrar}>
+    <S.Card $ativo={ativo} onClick={filtrar}>
       <S.Contador>{contador}</S.Contador>
       <S.Label>{legenda}</S.Label>
     </S.Card>
