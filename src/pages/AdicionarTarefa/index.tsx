@@ -3,7 +3,7 @@ import Formulario from '../../containers/Formulario'
 
 const AdicionarTarefa = () => (
   <>
-    <BarraLateral />
+    <BarraLateral mostrarFiltros={false} />
     <Formulario />
   </>
 )

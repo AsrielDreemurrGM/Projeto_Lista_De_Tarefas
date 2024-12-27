@@ -4,7 +4,7 @@ import * as S from './styles'
 
 import { remover, editar, alterarStatus } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
-import { BotaoSalvarOuAdicionar } from '../../styles'
+import { Botao, BotaoSalvarOuAdicionar } from '../../styles'
 
 import * as enums from '../../utils/enums/TarefaEnums'
 
@@ -95,7 +95,7 @@ const Tarefa = ({
           </>
         ) : (
           <>
-            <S.Botao onClick={() => setEstaEditando(true)}>Editar</S.Botao>
+            <Botao onClick={() => setEstaEditando(true)}>Editar</Botao>
             <S.BotaoRemoverOuCancelar onClick={() => dispatch(remover(id))}>
               Remover
             </S.BotaoRemoverOuCancelar>
