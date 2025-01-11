@@ -36,6 +36,10 @@ export const Card = styled.div`
     align-items: center;
     margin-bottom: 16px;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+  }
 `
 
 export const Titulo = styled.h3`
@@ -66,6 +70,7 @@ export const Descricao = styled.textarea`
   resize: none;
   border: none;
   background-color: transparent;
+  field-sizing: content;
 `
 
 export const BarraDeAcoes = styled.div`

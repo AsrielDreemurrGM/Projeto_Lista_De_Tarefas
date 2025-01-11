@@ -5,6 +5,10 @@ export const Aside = styled.aside`
   padding: 16px;
   background-color: ${variaveis.offWhite};
   height: 100vh;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `
 
 export const Filtros = styled.div`
