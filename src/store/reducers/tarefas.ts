@@ -10,24 +10,26 @@ const initialState: TarefasState = {
   itens: [
     {
       id: 1,
-      descricao: 'Ver aula da EBAC',
-      prioridade: enums.Prioridades.IMPORTANTE,
-      status: enums.Status.PENDENTE,
-      titulo: 'Estudar React'
+      titulo: 'Experimente Criar Uma Nova Tarefa',
+      prioridade: enums.Prioridades.NORMAL,
+      status: enums.Status.CONCLUIDO,
+      descricao:
+        'Você pode criar novas tarefas através do botão de adição verde localizado no canto inferior direito da tela.'
     },
     {
       id: 2,
-      descricao: 'Iniciar o projeto 5 da Aula da Ebac',
+      titulo: 'Tente Concluir Esta Tarefa',
       prioridade: enums.Prioridades.IMPORTANTE,
-      status: enums.Status.CONCLUIDO,
-      titulo: 'Iniciar o Projeto 5'
+      status: enums.Status.PENDENTE,
+      descricao: 'Clique no título de uma tarefa para concluí-la.'
     },
     {
       id: 3,
-      descricao: 'Monitorar no LinkedIn',
+      titulo: 'Marque Esta Tarefa Como Pendente',
       prioridade: enums.Prioridades.URGENTE,
-      status: enums.Status.PENDENTE,
-      titulo: 'Procurar Emprego'
+      status: enums.Status.CONCLUIDO,
+      descricao:
+        'Clique no título de uma tarefa concluída para alterar para pendente.'
     }
   ]
 }
